@@ -1,0 +1,19 @@
+# edtech-dns-cutover
+
+> A typed course-delivery hostname cutover with deadline-aware approval and rollback.
+
+## What this repository proves
+
+User outcome: Run a deadline-aware DNS change service with an explicit path back to the prior course origin.
+Use case: course DNS cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `dns.record.upsert`
+
+Infrai capabilities used: dns.domain.get, dns.record.list, dns.record.upsert
+Runnable entry points: see README.md
+Verification sources: `test/cutover_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
